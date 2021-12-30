@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+:root {
+    --primaryTextColor: #eee;
+    --secondaryTextColor: #3a94e9;
+    --firstBackgroundColor: #171a2b;
+    --secondBackgroundColor: #1b1f3aee;
+    --hoverColor: #1e62df;
+    /* Hide Scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+:root::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Placeholders Text Color */
+
+::placeholder {
+    color: #999;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+}
+
+::-ms-input-placeholder {
+    color: #999;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+
+h3 {
+    font-size: 1.6rem;
+    color: var(--primaryTextColor);
+}
+
+h4 {
+    font-size: 1.3rem;
+    color: var(--secondaryTextColor);
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    border-radius: 15px;
+}
+
+button i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+.logo{
+    float: left;
+    /* position: fixed; */
+    width: 200px;
+    height: 50px;
+    /* background: white; */
+    top: 7px;
+    display: flex;
+    /* specifying document layer */
+    z-index: 3; 
+    cursor: pointer; /*for pointing at objects*/
+  }
+
+
+
+header {
+    width: 100%;
+    height: 35vh;
+    color: var(--primaryTextColor);
+}
+
+
+/* Navbar */
+
+nav {
+    display: flex;
+    padding: 0 5%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--secondBackgroundColor);
+}
+
+nav button {
+    color: var(--firstTextColor);
+    display: none;
+}
+
+nav button:active {
+    color: var(--hoverColor);
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    transition: 0.5s;
+}
+
+.nav-links a {
+    color: var(--firstTextColor);
+    font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+    color: var(--secondaryTextColor);
+}
+
+
+.image {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 95%;
+    display: block;
+}
+
+/* .image:hover {
+    -webkit-transform:scale(1.5);
+    transform:scale(1.5);   
+} */
+
+
+.image1 {
+    margin-top: 30px;
+    margin-left: -30px;
+    margin-bottom: 10px;
+    width: 120%;
+    display: block;
+}
+
+.imageGroup {
+    /* width:80%; */
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.imgG {
+    /* width: 350px;
+    height: 250px; */
+    width: 260px;
+    height: 190px;
+    /* width:80%; */
+}
+
+.bigTitle {
+    line-height: 1.2;
+    position: relative;
+
+    top: 50%;
+
+    bottom: 0;
+    left: 10%;
+    margin-left: -3px;
+}
+
+.caption{
+    font-size: 0.9rem;
+}
+
+
+.list::before {
+    content: " • ";
+    color: var(--secondaryTextColor); /* or whatever color you prefer */
+  }
+
+
+
+
+
+
+
+body {
+    background: linear-gradient(6deg, #1b1f3ad2, #1b1f3ad2),
+        url("../Images/5.109 (1).jpg");
+        background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--secondaryTextColor);
+    top: 0;
+    bottom: 0;
+    left: 10%;
+    margin-left: -3px;
+    z-index: -1;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 80%;
+    
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    
+    content: '';
+    position: absolute;  
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--secondaryTextColor);
+    border: 4px solid var(--primaryTextColor);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  
+  
+  /* Place the container to the right */
+  .right {
+    left: 10%;
+  }
+  
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--secondaryTextColor) transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -17px;
+  }
+  
+  /* The actual content */
+  .title {
+    width:200px;
+    padding: 10px 30px;
+    background-color: var(--secondaryTextColor);
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .text {
+    padding: 20px 30px;
+    /* background-color: white; */
+    color:  var(--primaryTextColor);
+    position: relative;
+    border-radius: 6px;
+  }
+
+
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: #000000;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer .social-medias {
+    display: flex;
+    gap: 1rem;
+}
+
+footer .social-medias a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--primaryTextColor);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+footer .social-medias a:hover {
+    background-color: var(--secondBackgroundColor);
+}
+
+.copyright p {
+    font-size: 1.3rem;
+    color: var(--primaryTextColor);
+}
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+    nav {
+        height: 70px;
+    }
+
+    nav button {
+        display: inline-block;
+    }
+
+    nav ul {
+        position: fixed;
+        left: 0;
+        top: 0;
+        flex-direction: column;
+        padding: 10% 5%;
+        background-color: #111;
+        width: 50%;
+        height: 100%;
+        gap: 1rem;
+    }
+
+    .hideNavbar {
+        transform: translateX(-100vw);
+    }
+
+    .cover {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        transition: 0.5s;
+        opacity: 0.5;
+        z-index: 100;
+    }
+
+    .hidenCover {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+  
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    .container {
+        width: 95%;
+        
+      }
+
+      footer {
+        height: 150px;
+        flex-direction: column-reverse;
+    }
+     
+}
+
